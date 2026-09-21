@@ -1,32 +1,21 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
-export default function LoginPage() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-xl">Welcome Back</CardTitle>
-        <CardDescription>Login with your Github Email Account</CardDescription>
-      </CardHeader>
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import LoginForm from "./_components/login-form";
 
-      <CardContent>
-        <Button variant={"outline"} className={"w-full"}>
-          <Image
-            src={"/github.svg"}
-            alt="Github"
-            width={20}
-            height={20}
-            className="size-4 text-background"
-          />
-          Sign in with Github
-        </Button>
-      </CardContent>
-    </Card>
-  );
+export const metadata = {
+  title: "Login",
+  description: "Login to your account",
+};
+
+export default async function LoginPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (session) {
+    return redirect("/");
+  }
+
+  return <LoginForm />;
 }
