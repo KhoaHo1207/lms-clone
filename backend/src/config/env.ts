@@ -1,0 +1,23 @@
+import { getEnv } from "@/utils/get-env.js";
+
+export const ENV = {
+  NODE_ENV: getEnv("NODE_ENV"),
+  PORT: getEnv("PORT"),
+
+  FRONTEND_URL: getEnv("FRONTEND_URL"),
+
+  MONGO_URI: getEnv("MONGO_URI"),
+
+  JWT_SECRET: getEnv("JWT_SECRET"),
+  JWT_EXPIRES_IN: getEnv("JWT_EXPIRES_IN"),
+  JWT_REFRESH_SECRET: getEnv("JWT_REFRESH_SECRET"),
+  JWT_REFRESH_EXPIRES_IN: getEnv("JWT_REFRESH_EXPIRES_IN"),
+
+  BREVO_SMTP_HOST: getEnv("BREVO_SMTP_HOST"),
+  BREVO_SMTP_PORT: getEnv("BREVO_SMTP_PORT"),
+  BREVO_SMTP_USER: getEnv("BREVO_SMTP_USER"),
+  BREVO_SMTP_KEY: getEnv("BREVO_SMTP_KEY"),
+
+  MAIL_FROM_NAME: getEnv("MAIL_FROM_NAME"),
+  MAIL_FROM_EMAIL: getEnv("MAIL_FROM_EMAIL"),
+};

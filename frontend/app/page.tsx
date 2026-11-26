@@ -1,9 +1,9 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { HomeHeader } from "@/components/auth/home-header";
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle />
+    <div className="flex min-h-svh flex-col">
+      <HomeHeader />
     </div>
   );
 }
