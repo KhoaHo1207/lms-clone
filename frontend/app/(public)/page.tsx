@@ -1,4 +1,4 @@
-import { HomeHeader } from "@/components/auth/home-header";
+import { HomeHeader } from "@/components/home-header";
 
 export default function Home() {
   return (

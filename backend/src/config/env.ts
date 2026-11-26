@@ -20,4 +20,6 @@ export const ENV = {
 
   MAIL_FROM_NAME: getEnv("MAIL_FROM_NAME"),
   MAIL_FROM_EMAIL: getEnv("MAIL_FROM_EMAIL"),
+
+  ARCJET_KEY: getEnv("ARCJET_KEY"),
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { LogoutButton } from "@/components/auth/logout-button";
+import { LogoutButton } from "@/components/logout-button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { ApiError } from "@/lib/api";
